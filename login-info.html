@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width'/">
+    <title>팜픽</title>
+
+    <!-- css stylesheet 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--브라우저 스타일 초기화-->
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+</head>
+
+<body class="suit">
+    <div class="content">
+
+        <header>
+            <div class="wrap">
+                <div class="header_left">
+                    <div class="prev">
+                        <a href="#">
+                            <img src="./assets/icons/prev.png" alt="뒤로가기">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header_center">
+                    <div class="txt">
+                        <h5>로그인 정보</h5>
+                    </div>
+                </div>
+                <div class="header_right">
+                </div>
+            </div>
+        </header>
+
+        <div class="con">
+            <div class="wrap">
+                <div class="login-info">
+
+                    <!-- 프로그레스 바 -->
+                    <div class="progress-bar">
+                        <progress id="progress" value="40" min="0" max="100"></progress>
+                        <img src="./assets/icons/깃발.png" alt="깃발">
+                    </div>
+
+
+                    <!-- 로그인 정보 -->
+                    <div class="login">
+
+                        <!-- 이메일 입력 -->
+                        <div class="login-input">
+                            <p>이메일 <span>*</span></p>
+                            <input type="textbox" name="email" value="이메일을 입력해주세요" id="email">
+                        </div>
+
+
+                        <!-- 비밀번호 입력 -->
+                        <div class="login-input">
+                            <p>비밀번호 <span>*</span></p>
+                            <input type="textbox" name="pw" value="최소 8자리 및 영문 소문자 + 숫자 조합" id="pw">
+                            <input type="textbox" name="re-pw" value="비밀번호를 재입력해주세요" id="re-pw">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="grey-button-wrap">
+                <button type="button">다음</button>
+            </div>
+
+
+            <!-- 활성화 시 버튼 -->
+            <div class="btn-wrap" style="display: none;">
+                <button type="button">다음</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

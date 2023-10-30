@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+@import "_common.scss";
+@import "personal-info.scss";
+@import "login-info.scss";
+@import "join.scss";
+@import "join-completed.scss";
+@import "find-email.scss";
+@import "find-pw.scss";
+@import "main.scss";
+@import "authority.scss";
+
+#splash {
+	.content {
+		background-color: var(--main-color);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+
+		.con {
+			.wrap {
+				.splash {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 24px;
+
+					.img {
+						img {
+							width: 100%;
+						}
+					}
+
+					p {
+						border: 1px solid #fff;
+						border-radius: 50px;
+						font-family: var(--main-font-family);
+						font-weight: 700;
+						font-size: 14px;
+						line-height: 18.9px;
+						letter-spacing: -0.07px;
+						padding: 4px 26px;
+						color: #fff;
+						background-color: rgba(255, 255, 255, 0.18);
+					}
+				}
+			}
+		}
+	}
+}

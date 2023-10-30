@@ -1,0 +1,268 @@
+@font-face {
+	font-family: "Pretendard-Regular";
+	src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+		format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+// 전역 변수
+:root {
+	--main-color: #01c7b6;
+	--main-font-family: "Pretendard-Regular";
+
+	--foundation-blue-dark: #009d92;
+
+	--bg: #f2f4f6;
+	--bg_g: #f4f4f4;
+
+	--grey1: #a5a5a5;
+	--grey2: #8b8b8b;
+	--grey3: #6f6f6f;
+	--grey4: #555;
+
+	--light-grey2: #c1c1c1;
+
+	--dark-grey1: #3d3d3d;
+	--dark-grey2: #242424;
+
+	accent-color: var(--main-color);
+}
+
+// 모든 요소
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Pretendard-Regular";
+	font-weight: 400;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.suit * {
+	font-family: "Pretendard-Regular";
+}
+
+// common
+.content {
+	width: 375px;
+	margin: 0 auto;
+}
+
+.wrap {
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.flex_wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.con {
+	.wrap {
+		padding-top: 20px;
+	}
+}
+
+// button
+.btn-wrap {
+	position: fixed;
+	bottom: 0;
+	width: 375px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+
+	a {
+		background: #3983a0;
+		border-radius: 6px;
+		color: #fff;
+		width: 375px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	button {
+		background: var(--main-color);
+		border: none;
+		border-radius: 16px;
+		color: #fff;
+		width: 375px;
+		height: 50px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+
+.grey-button-wrap {
+	position: fixed;
+	bottom: 0;
+	width: 375px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+
+	a {
+		background: #3983a0;
+		border-radius: 6px;
+		color: #fff;
+		width: 375px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	button {
+		background: var(--light-grey2);
+		border: none;
+		border-radius: 16px;
+		color: #fff;
+		width: 375px;
+		height: 50px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+// nav + button 위치
+.nav + .btn_wrap {
+	bottom: 77px;
+}
+
+// header
+header {
+	position: sticky;
+	z-index: 12;
+	top: 0;
+	width: 375px;
+	background: #fff;
+	/* border-bottom: 1px solid #eee; */
+
+	.wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 50px;
+
+		.header_left,
+		.header_right {
+			width: 16px;
+		}
+
+		.header_center {
+			width: 100%;
+			margin: 0 24px;
+
+			.txt {
+				text-align: center;
+
+				h5 {
+					font-weight: 700;
+					line-height: 24px;
+					letter-spacing: -0.08px;
+					font-size: 16px;
+					color: var(--Dark-Grey-2);
+				}
+			}
+		}
+	}
+}
+
+// nav
+.nav {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 375px;
+	height: 77px;
+	background-color: #fff;
+	border-top: 1px solid #eeeeee;
+	box-sizing: border-box;
+
+	li {
+		width: 25%;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+
+			p {
+				font-size: 12px;
+				margin-top: 10px;
+				color: #cccccc;
+			}
+		}
+	}
+}
+
+// checkbox
+input[type="checkbox"] {
+	display: none;
+
+	// 체크박스가 체크됐을 때
+	&:checked + .check_style1::after {
+		width: 24px;
+		height: 24px;
+		background-color: #fff;
+		border-radius: 2px;
+		background: url("../assets/icons/Checkedbox.png");
+	}
+}
+
+.check_style1 {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	font-size: 16px;
+
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background-color: #fff;
+		border-radius: 2px;
+		background: url("../assets/icons/Checkbox.png");
+	}
+}

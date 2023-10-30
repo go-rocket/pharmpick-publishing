@@ -1,0 +1,123 @@
+.authority {
+	background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.5) 0%,
+			rgba(0, 0, 0, 0.5) 100%
+		),
+		#01c7b6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 20px;
+	height: 100vh;
+    
+	.wrap {
+		width: 100%;
+        padding: 0px;
+
+		.authority-container {
+			background-color: #fff;
+			border-radius: 12px;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 40px;
+
+			.authority-title {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				margin-bottom: 20px;
+
+				p {
+					font-weight: 700;
+					line-height: 24px;
+					letter-spacing: -0.08px;
+					font-size: 16px;
+				}
+
+				img {
+					position: absolute;
+					right: 0;
+				}
+			}
+
+			.authority-txt {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				.img {
+					z-index: 1;
+
+					img {
+						width: 156px;
+						height: 156px;
+						position: relative;
+						left: 15px;
+					}
+				}
+
+				.txt-box {
+					width: 100%;
+					background-color: #f6f7f9;
+					border-radius: 12px;
+					padding: 20px;
+					position: relative;
+					top: -32px;
+					margin-bottom: -32px;
+
+					.txt-box-con {
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 12px;
+
+						.txt-box-con-camera,
+						.txt-box-con-alert,
+						.txt-box-con-location {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: 12px;
+
+							p {
+								font-weight: 500;
+								font-size: 12px;
+								letter-spacing: -0.06px;
+								line-height: 130%;
+
+								span {
+									color: var(--foundation-blue-dark);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.confirm-button {
+				width: 100%;
+
+				button {
+					width: 100%;
+
+					background: var(--main-color);
+					border: none;
+					border-radius: 16px;
+					color: #fff;
+
+					height: 50px;
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

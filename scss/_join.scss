@@ -1,0 +1,252 @@
+.con {
+	.wrap {
+		.join {
+			margin-top: 30px;
+
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 45px;
+
+			.join-txt {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+
+				p {
+					font-size: 20px;
+					font-weight: 700;
+					line-height: 140%;
+					letter-spacing: -0.1px;
+
+					span {
+						color: var(--main-color);
+					}
+				}
+			}
+
+			.all-agreed {
+				width: 100%;
+				background-color: var(--bg);
+				padding: 20px;
+				border-radius: 12px;
+
+				label {
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 135%;
+					letter-spacing: -0.07px;
+					color: var(--dark-grey1);
+
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					width: 100%;
+				}
+			}
+
+			.terms {
+				padding: 0px 20px;
+
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 30px;
+
+				.terms-con {
+					width: 100%;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+
+					.terms-con-title {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						width: 100%;
+						margin-bottom: 16px;
+
+						p {
+							color: var(--grey4);
+							font-size: 14px;
+							font-weight: 500;
+							line-height: 140%;
+							letter-spacing: -0.07px;
+
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: 5px;
+
+							img {
+								cursor: pointer;
+							}
+						}
+					}
+
+					// 약관 펼쳤을 때 하단에 나오는 약관
+					.terms-con-txt {
+						border-top: 1px solid var(--bg);
+						padding: 16px 0px;
+
+						p {
+							font-size: 12px;
+							font-weight: 500;
+							line-height: 130%;
+							letter-spacing: -0.06px;
+							color: var(--grey2);
+						}
+					}
+				}
+			}
+
+			.confirm-button {
+				button {
+					background-color: var(--light-grey2);
+					color: #fff;
+					margin-bottom: 35px;
+				}
+			}
+		}
+		.join {
+			background-color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 45px;
+
+			.first {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+
+				p {
+					font-weight: 700;
+					line-height: 24px;
+					letter-spacing: -0.08px;
+					font-size: 16px;
+					color: var(--Dark-Grey-2);
+				}
+
+				img {
+					position: absolute;
+					left: 0;
+				}
+			}
+
+			.second {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+
+				p {
+					font-size: 20px;
+					font-weight: 700;
+					line-height: 140%;
+					letter-spacing: -0.1px;
+
+					span {
+						color: var(--main-color);
+					}
+				}
+			}
+
+			.third {
+				width: 100%;
+				background-color: var(--bg);
+				padding: 20px;
+
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-radius: 12px;
+
+				p {
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 135%;
+					letter-spacing: -0.07px;
+					color: var(--dark-grey1);
+				}
+			}
+
+			.fourth {
+				padding: 0px 20px;
+
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 30px;
+
+				.fourth-con {
+					width: 100%;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+
+					.fourth-con-first {
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						width: 100%;
+						margin-bottom: 16px;
+
+						p {
+							color: var(--grey4);
+							font-size: 14px;
+							font-weight: 500;
+							line-height: 140%;
+							letter-spacing: -0.07px;
+
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							gap: 5px;
+
+							img {
+								cursor: pointer;
+							}
+						}
+					}
+
+					.fourth-con-txt {
+						border-top: 1px solid var(--bg);
+						padding: 16px 0px;
+
+						p {
+							font-size: 12px;
+							font-weight: 500;
+							line-height: 130%;
+							letter-spacing: -0.06px;
+							color: var(--grey2);
+						}
+					}
+				}
+			}
+
+			.confirm-button {
+				button {
+					background-color: var(--light-grey2);
+					color: #fff;
+					margin-bottom: 35px;
+				}
+			}
+		}
+	}
+}

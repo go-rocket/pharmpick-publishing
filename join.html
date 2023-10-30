@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width'/">
+    <title>팜픽</title>
+
+    <!-- css stylesheet 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--브라우저 스타일 초기화-->
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+</head>
+
+<body class="suit">
+    <div class="content">
+
+        <header>
+            <div class="wrap">
+                <div class="header_left">
+                    <div class="prev">
+                        <a href="#">
+                            <img src="./assets/icons/prev.png" alt="뒤로가기">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header_center">
+                    <div class="txt">
+                        <h5>회원가입</h5>
+                    </div>
+                </div>
+                <div class="header_right">
+                </div>
+            </div>
+        </header>
+
+        <div class="con">
+            <div class="wrap">
+                <div class="join">
+
+                    <div class="join-txt">
+                        <p>팜픽에 오신걸 환영합니다</p>
+                        <p>
+                            <span>약관에 동의</span>
+                            해주세요
+                        </p>
+                    </div>
+
+                    <div class="all-agreed">
+                        <input type="checkbox" name="" id="check_all">
+                        <label for="check_all" class="check_style1">약관 전체동의</label>
+                    </div>
+
+                    <div class="terms">
+                        <!-- 약관 펼쳤을 때 -->
+                        <div class="terms-con">
+                            <div class="terms-con-title">
+                                <p>만 14세 이상(필수)
+                                    <img src="./assets/icons/up.png" alt="접기 아이콘">
+                                </p>
+
+                                <input type="checkbox" name="" id="check1">
+                                <label for="check1" class="check_style1"></label>
+                            </div>
+
+                            <div class="terms-con-txt">
+                                <p>
+                                    서비스 이용약관 더미 텍스트 입니다 서비스 이용약관은 필수 입니다1.서비스 이용약관에 동의하세요! 2.동의하세요서비스 이용약관 더미 텍스트 입니다
+                                    서비스
+                                    이용약관은 필수 입니다 2.동의하세요1.서비스 이용약관에
+                                    동의하세요! 2.동의하세요서비스 이용약관 더미 텍스트 입니다 서비스 이용약관은 필수 입니다
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- 약관 기본 상태 -->
+                        <div class="terms-con">
+                            <div class="terms-con-title">
+                                <p>서비스 이용약관(필수)
+                                    <img src="./assets/icons/drop-down.png" alt="닫기 아이콘">
+                                </p>
+
+
+                                <input type="checkbox" name="" id="check2">
+                                <label for="check2" class="check_style1"></label>
+                            </div>
+                        </div>
+
+                        <div class="terms-con">
+                            <div class="terms-con-title">
+                                <p>위치허용 (선택)
+                                    <img src="./assets/icons/drop-down.png" alt="닫기 아이콘">
+                                </p>
+
+
+                                <input type="checkbox" name="" id="check3">
+                                <label for="check3" class="check_style1"></label>
+                            </div>
+                        </div>
+
+                        <div class="terms-con">
+                            <div class="terms-con-title">
+                                <p>알림설정 (선택)
+                                    <img src="./assets/icons/drop-down.png" alt="닫기 아이콘">
+                                </p>
+
+
+                                <input type="checkbox" name="" id="check4">
+                                <label for="check4" class="check_style1"></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 버튼 비활성화일 때 -->
+            <div class="grey-button-wrap">
+                <button type="button">동의합니다</button>
+            </div>
+
+            <!-- 필수항목 동의 후 버튼 활성화 될 때 -->
+            <div class="btn-wrap" style="display: none;">
+                <button type="button">동의합니다</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width'/">
+    <title>팜픽</title>
+
+    <!-- css stylesheet 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--브라우저 스타일 초기화-->
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+</head>
+
+<body class="suit">
+    <div class="content">
+
+        <header>
+            <div class="wrap">
+                <div class="header_left">
+                    <div class="prev">
+                        <a href="#">
+                            <img src="./assets/icons/prev.png" alt="뒤로가기">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header_center">
+                    <div class="txt">
+                        <h5>개인정보</h5>
+                    </div>
+                </div>
+                <div class="header_right">
+                </div>
+            </div>
+        </header>
+
+        <div class="con">
+            <div class="wrap">
+                <div class="personal-info">
+
+                    <!-- 프로그레스 바 -->
+                    <div class="progress-bar">
+                        <progress id="progress" value="60" min="0" max="100"></progress>
+                        <img src="./assets/icons/깃발.png" alt="깃발">
+                    </div>
+
+                    <!-- 프로필 사진 첨부 -->
+                    <div class="profile-pic">
+                        <label for="file">
+                            <img src="./assets/icons/사진.png" alt="사진첨부">
+                        </label>
+                        <input type="file" id="file">
+                    </div>
+
+                    <!-- 개인정보 입력 -->
+                    <div class="personal-infomation">
+                        <div class="personal-infomation-input">
+                            <p>전화번호 <span>*</span></p>
+                            <input type="textbox" name="phone" value="전화번호를 입력해주세요" id="phone">
+
+                            <button>인증번호 받기</button>
+                        </div>
+
+
+                        <!-- '인증번호 받기' 버튼 클릭 시 -->
+                        <!-- display:none 해둔상태입니다. -->
+                        <div class="personal-infomation-input resend" style="display: none;">
+                            <p>전화번호 <span>*</span></p>
+                            <input type="textbox" name="phone" id="phone">
+
+                            <button>인증번호 재발송</button>
+                        </div>
+                        <div class="personal-infomation-input type-verification" style="display: none;">
+                            <p>인증번호 입력 <span>*</span></p>
+
+                            <div class="verification">
+                                <input type="textbox" name="verification" id="verification">
+                                <span>02:32</span>
+                                <button>인증받기</button>
+                            </div>
+                        </div>
+
+
+                        <div class="personal-infomation-input overlap-confirm">
+                            <p>닉네임 <span>*</span></p>
+                            <input type="textbox" name="nickname" id="nickname">
+
+                            <button>중복확인</button>
+                        </div>
+
+                        <!-- 중복확인 버튼 클릭 시 -->
+                        <!-- display:none 해둔상태입니다. -->
+                        <div class="overlap" style="display: none;">
+                            <div class="inner">
+                                <div class="img">
+                                    <img src="/assets/icons/확인체크.png" alt="확인 체크">
+                                </div>
+
+                                <div class="txt">
+                                    <p>중복확인</p>
+                                    <span>사용 가능한 닉네임 입니다.</span>
+                                    <button>확인</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="personal-infomation-input">
+                            <p>우리 동네 설정 <span>*</span></p>
+                            <input type="textbox" name="mytown" value="우리 동네를 설정해주세요" id="mytown">
+                        </div>
+
+                        <div class="personal-infomation-input">
+                            <p>생년월일</p>
+                            <input type="textbox" name="birthday" value="생년월일을 입력해주세요" id="birthday">
+                        </div>
+
+                        <div class="personal-infomation-input gender">
+                            <p>성별</p>
+
+                            <div class="gender-select">
+                                <button>
+                                    <img src="./assets/icons/남성.png" alt="남성 캐릭터">
+                                    <p>남성</p>
+                                </button>
+                                <button>
+                                    <img src="./assets/icons/여성.png" alt="여성 캐릭터">
+                                    <p>여성</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="btn-wrap">
+                <button type="button">다음</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
