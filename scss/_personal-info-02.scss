@@ -37,8 +37,18 @@
 
 			.profile-pic {
 				label {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+
 					img {
 						cursor: pointer;
+
+						&:last-child {
+							position: absolute;
+							bottom: 0px;
+						}
 					}
 				}
 
@@ -52,7 +62,7 @@
 				width: 100%;
 				display: flex;
 				flex-direction: column;
-				gap: 16px;
+				gap: 25px;
 				align-items: center;
 
 				.personal-infomation-input {
@@ -249,6 +259,11 @@
 								letter-spacing: -0.5%;
 								line-height: 19.6px;
 							}
+						}
+
+						.gender-click {
+							border: 2px solid var(--main-color);
+							background-color: #e8fffd;
 						}
 					}
 				}

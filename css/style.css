@@ -18,6 +18,7 @@
   --dark-grey1: #3d3d3d;
   --dark-grey2: #242424;
   accent-color: var(--main-color);
+  --red: #ff005c;
 }
 
 * {
@@ -184,11 +185,16 @@ header .wrap .header_center .txt h5 {
   width: 375px;
   height: 77px;
   background-color: #fff;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid var(--light-grey2);
   box-sizing: border-box;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 5px 10px;
 }
 .nav li {
   width: 25%;
+  padding: 7px;
+  border-radius: 16px;
 }
 .nav li a {
   display: block;
@@ -198,12 +204,15 @@ header .wrap .header_center .txt h5 {
   text-align: center;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .nav li a p {
   font-size: 12px;
   margin-top: 10px;
   color: #cccccc;
+}
+.nav .on {
+  background-color: #e8fffd;
 }
 
 input[type=checkbox] {
@@ -234,213 +243,30 @@ input[type=checkbox]:checked + .check_style1::after {
   background: url("../assets/icons/Checkbox.png");
 }
 
-.con .wrap .personal-info {
+.err-textbox {
+  border: 1px solid palevioletred;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  height: 100vh;
+  align-items: flex-start;
+  gap: 5px;
 }
-.con .wrap .personal-info .progress-bar {
+.err-textbox input {
+  border: 1px solid var(--red);
   width: 100%;
+}
+.err-textbox .err-textbox-txt {
+  border: 1px solid gold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-.con .wrap .personal-info .progress-bar progress {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 8px;
-}
-.con .wrap .personal-info .progress-bar ::-webkit-progress-bar {
-  background-color: grey;
-  border-radius: 50px;
-  background-color: #d5ece9;
-}
-.con .wrap .personal-info .progress-bar ::-webkit-progress-value {
-  background-color: var(--main-color);
-  border-radius: 50px;
-}
-.con .wrap .personal-info .profile-pic label img {
-  cursor: pointer;
-}
-.con .wrap .personal-info .profile-pic input {
-  display: none;
-  cursor: pointer;
-}
-.con .wrap .personal-info .personal-infomation {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-}
-.con .wrap .personal-info .personal-infomation .personal-infomation-input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.con .wrap .personal-info .personal-infomation .personal-infomation-input p {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.08px;
-  display: flex;
-  gap: 3px;
-}
-.con .wrap .personal-info .personal-infomation .personal-infomation-input p span {
-  color: #ff3609;
-  font-size: 12px;
-  letter-spacing: -0.5%;
-  line-height: 16px;
-  font-weight: 400;
-}
-.con .wrap .personal-info .personal-infomation .personal-infomation-input input {
-  background-color: var(--bg_g);
-  border-radius: 16px;
-  padding: 16px 20px;
-  color: var(--grey1);
-  border: 1px solid transparent;
-}
-.con .wrap .personal-info .personal-infomation .personal-infomation-input button {
-  margin-top: 5px;
-  padding: 10px 36px;
-  background-color: var(--light-grey2);
-  border: 1px solid transparent;
-  border-radius: 12px;
-  color: #fff;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.5%;
-}
-.con .wrap .personal-info .personal-infomation .overlap-confirm button,
-.con .wrap .personal-info .personal-infomation .resend button {
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
-  background-color: #fff;
-}
-.con .wrap .personal-info .personal-infomation .overlap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 20%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7) fixed;
-  z-index: 9;
-}
-.con .wrap .personal-info .personal-infomation .overlap .inner {
-  width: 375px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: -80px;
-}
-.con .wrap .personal-info .personal-infomation .overlap .inner img {
-  position: relative;
-  top: 80px;
-}
-.con .wrap .personal-info .personal-infomation .overlap .inner .txt {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
-  padding: 100px 30px 30px;
-  border: 1px solid var(--main-color);
-  border-radius: 12px;
-}
-.con .wrap .personal-info .personal-infomation .overlap .inner .txt p {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: -0.5%;
-  color: var(--Dark-Grey-1);
-}
-.con .wrap .personal-info .personal-infomation .overlap .inner .txt span {
+.err-textbox .err-textbox-txt span {
   font-weight: 500;
   font-size: 16px;
-  line-height: 21.6px;
-  letter-spacing: -0.5%;
-  color: var(--grey3);
-  margin-bottom: 20px;
-}
-.con .wrap .personal-info .personal-infomation .overlap .inner .txt button {
-  width: 100%;
-  background-color: var(--main-color);
-  color: #fff;
-  width: 100%;
-  padding: 10px 36px;
-  border-radius: 16px;
-  margin-bottom: 0px;
-  border: 1px solid transparent;
-  font-family: var(--main-font-family);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.08px;
-  text-align: center;
-}
-.con .wrap .personal-info .personal-infomation .type-verification .verification {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-.con .wrap .personal-info .personal-infomation .type-verification .verification input {
-  padding: 16px 27px;
-}
-.con .wrap .personal-info .personal-infomation .type-verification .verification span {
-  position: absolute;
-  right: 125px;
-  top: 17px;
   letter-spacing: -0.5%;
   line-height: 21.6px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--main-color);
-}
-.con .wrap .personal-info .personal-infomation .type-verification .verification button {
-  background-color: var(--main-color);
-  color: #fff;
-  margin-top: 0px;
-  padding: 16px 20px;
-}
-.con .wrap .personal-info .personal-infomation .gender {
-  display: flex;
-  flex-direction: column;
-}
-.con .wrap .personal-info .personal-infomation .gender .gender-select {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.con .wrap .personal-info .personal-infomation .gender .gender-select button {
-  border-radius: 12px;
-  background-color: var(--bg_g);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 48px;
-}
-.con .wrap .personal-info .personal-infomation .gender .gender-select button p {
-  color: var(--grey1);
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: -0.5%;
-  line-height: 19.6px;
+  color: var(--red);
 }
 
 .con .wrap .login-info {
@@ -1242,7 +1068,7 @@ input[type=checkbox]:checked + .check_style1::after {
 .authority .wrap .authority-container {
   background-color: #fff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1299,24 +1125,21 @@ input[type=checkbox]:checked + .check_style1::after {
   gap: 12px;
 }
 .authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-camera,
-.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-alert,
-.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-location {
+.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-alert {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
 .authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-camera p,
-.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-alert p,
-.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-location p {
+.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-alert p {
   font-weight: 500;
   font-size: 12px;
   letter-spacing: -0.06px;
   line-height: 130%;
 }
 .authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-camera p span,
-.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-alert p span,
-.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-location p span {
+.authority .wrap .authority-container .authority-txt .txt-box .txt-box-con .txt-box-con-alert p span {
   color: var(--foundation-blue-dark);
 }
 .authority .wrap .authority-container .confirm-button {
@@ -1331,6 +1154,602 @@ input[type=checkbox]:checked + .check_style1::after {
   height: 50px;
   font-size: 16px;
   font-weight: 600;
+}
+
+.con .wrap .login-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.con .wrap .login-info .progress-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.con .wrap .login-info .progress-bar progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+}
+.con .wrap .login-info .progress-bar ::-webkit-progress-bar {
+  background-color: grey;
+  border-radius: 50px;
+  background-color: #d5ece9;
+}
+.con .wrap .login-info .progress-bar ::-webkit-progress-value {
+  background-color: var(--main-color);
+  border-radius: 50px;
+}
+.con .wrap .login-info .login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+.con .wrap .login-info .login .login-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.con .wrap .login-info .login .login-input p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  display: flex;
+  gap: 3px;
+}
+.con .wrap .login-info .login .login-input p span {
+  color: #ff3609;
+  font-size: 12px;
+  letter-spacing: -0.5%;
+  line-height: 16px;
+  font-weight: 400;
+}
+.con .wrap .login-info .login .login-input input {
+  background-color: var(--bg_g);
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: var(--grey1);
+  border: 1px solid transparent;
+}
+.con .wrap .login-info .login .login-input button {
+  margin-top: 5px;
+  padding: 10px 36px;
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+  border-radius: 12px;
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5%;
+}
+
+.con .wrap .personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 100vh;
+}
+.con .wrap .personal-info .progress-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.con .wrap .personal-info .progress-bar progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+}
+.con .wrap .personal-info .progress-bar ::-webkit-progress-bar {
+  background-color: grey;
+  border-radius: 50px;
+  background-color: #d5ece9;
+}
+.con .wrap .personal-info .progress-bar ::-webkit-progress-value {
+  background-color: var(--main-color);
+  border-radius: 50px;
+}
+.con .wrap .personal-info .profile-pic label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.con .wrap .personal-info .profile-pic label img {
+  cursor: pointer;
+}
+.con .wrap .personal-info .profile-pic label img:last-child {
+  position: absolute;
+  bottom: 0px;
+}
+.con .wrap .personal-info .profile-pic input {
+  display: none;
+  cursor: pointer;
+}
+.con .wrap .personal-info .personal-infomation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.con .wrap .personal-info .personal-infomation .personal-infomation-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.con .wrap .personal-info .personal-infomation .personal-infomation-input p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  display: flex;
+  gap: 3px;
+}
+.con .wrap .personal-info .personal-infomation .personal-infomation-input p span {
+  color: #ff3609;
+  font-size: 12px;
+  letter-spacing: -0.5%;
+  line-height: 16px;
+  font-weight: 400;
+}
+.con .wrap .personal-info .personal-infomation .personal-infomation-input input {
+  background-color: var(--bg_g);
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: var(--grey1);
+  border: 1px solid transparent;
+}
+.con .wrap .personal-info .personal-infomation .personal-infomation-input button {
+  margin-top: 5px;
+  padding: 10px 36px;
+  background-color: var(--light-grey2);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5%;
+}
+.con .wrap .personal-info .personal-infomation .overlap-confirm button,
+.con .wrap .personal-info .personal-infomation .resend button {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: #fff;
+}
+.con .wrap .personal-info .personal-infomation .overlap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7) fixed;
+  z-index: 9;
+}
+.con .wrap .personal-info .personal-infomation .overlap .inner {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -80px;
+}
+.con .wrap .personal-info .personal-infomation .overlap .inner img {
+  position: relative;
+  top: 80px;
+}
+.con .wrap .personal-info .personal-infomation .overlap .inner .txt {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 100px 30px 30px;
+  border: 1px solid var(--main-color);
+  border-radius: 12px;
+}
+.con .wrap .personal-info .personal-infomation .overlap .inner .txt p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.5%;
+  color: var(--Dark-Grey-1);
+}
+.con .wrap .personal-info .personal-infomation .overlap .inner .txt span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  letter-spacing: -0.5%;
+  color: var(--grey3);
+  margin-bottom: 20px;
+}
+.con .wrap .personal-info .personal-infomation .overlap .inner .txt button {
+  width: 100%;
+  background-color: var(--main-color);
+  color: #fff;
+  width: 100%;
+  padding: 10px 36px;
+  border-radius: 16px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+  font-family: var(--main-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  text-align: center;
+}
+.con .wrap .personal-info .personal-infomation .type-verification .verification {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.con .wrap .personal-info .personal-infomation .type-verification .verification input {
+  padding: 16px 27px;
+}
+.con .wrap .personal-info .personal-infomation .type-verification .verification span {
+  position: absolute;
+  right: 125px;
+  top: 17px;
+  letter-spacing: -0.5%;
+  line-height: 21.6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.con .wrap .personal-info .personal-infomation .type-verification .verification button {
+  background-color: var(--main-color);
+  color: #fff;
+  margin-top: 0px;
+  padding: 16px 20px;
+}
+.con .wrap .personal-info .personal-infomation .gender {
+  display: flex;
+  flex-direction: column;
+}
+.con .wrap .personal-info .personal-infomation .gender .gender-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.con .wrap .personal-info .personal-infomation .gender .gender-select button {
+  border-radius: 12px;
+  background-color: var(--bg_g);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 48px;
+}
+.con .wrap .personal-info .personal-infomation .gender .gender-select button p {
+  color: var(--grey1);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.5%;
+  line-height: 19.6px;
+}
+.con .wrap .personal-info .personal-infomation .gender .gender-select .gender-click {
+  border: 2px solid var(--main-color);
+  background-color: #e8fffd;
+}
+
+.con .wrap {
+  padding: 0px 0px 0px;
+}
+.con .wrap .home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.con .wrap .home .home-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 3px;
+  padding: 50px 20px;
+  position: relative;
+  background-color: var(--main-color);
+}
+.con .wrap .home .home-title p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.1px;
+  color: #fff;
+}
+.con .wrap .home .home-title p:nth-of-type(1) {
+  font-size: 15px;
+  opacity: 0.8;
+}
+.con .wrap .home .home-title img {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 18;
+}
+.con .wrap .home .home-contents {
+  background-color: #fff;
+  border-top-right-radius: 28px;
+  border-top-left-radius: 28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  top: -25px;
+}
+.con .wrap .home .home-contents .search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+.con .wrap .home .home-contents .search-bar input {
+  width: 100%;
+  background-color: var(--bg_g);
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: var(--grey1);
+  border: 1px solid transparent;
+}
+.con .wrap .home .home-contents .search-bar img {
+  position: absolute;
+  right: 20px;
+}
+.con .wrap .home .home-contents .trouble {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 103%;
+}
+.con .wrap .home .home-contents .trouble .trouble-title p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: -0.5%;
+}
+.con .wrap .home .home-contents .trouble ul {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+.con .wrap .home .home-contents .trouble ul li {
+  border: 1px solid #f2f4f6;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.con .wrap .home .home-contents .trouble ul li .img img:nth-child(2) {
+  position: absolute;
+  right: 3px;
+}
+.con .wrap .home .home-contents .trouble ul li p {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.5%;
+  text-align: center;
+}
+.con .wrap .home .home-contents .take-multiple {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-title p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: -0.5%;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 30px;
+  background-color: #f2f4f6;
+  border-radius: 12px;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-box .multiple-box-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-box .multiple-box-first .multiple-box-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-box .multiple-box-first .multiple-box-txt p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: -0.5%;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-box .multiple-box-first .multiple-box-txt p:last-child {
+  font-size: 10px;
+  line-height: 13.5px;
+}
+.con .wrap .home .home-contents .take-multiple .multiple-box button {
+  width: 100%;
+  border-radius: 16px;
+  padding: 3px 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.5%;
+  text-align: center;
+  border: 1px solid transparent;
+  background-color: var(--main-color);
+  color: #fff;
+}
+.con .wrap .home .banner {
+  background-color: rgba(255, 120, 128, 0.9);
+  display: flex;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  margin-top: -10px;
+}
+.con .wrap .home .banner .banner-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.con .wrap .home .banner .banner-txt p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 19.8px;
+  letter-spacing: -0.5%;
+  color: #fff;
+}
+.con .wrap .home .banner .banner-txt p:first-child {
+  font-size: 10px;
+  line-height: 13.5px;
+}
+.con .wrap .home .banner img {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+}
+.con .wrap .home .popular {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 77px;
+}
+.con .wrap .home .popular .popular-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.con .wrap .home .popular .popular-title p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: -0.5%;
+}
+.con .wrap .home .popular .popular-title p:last-child {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15.6px;
+  letter-spacing: -0.5%;
+  color: var(--grey1);
+}
+.con .wrap .home .popular ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.con .wrap .home .popular ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.con .wrap .home .popular ul li .img {
+  width: 120px;
+  height: 120px;
+  background-color: #f2f4f6;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.con .wrap .home .popular ul li .img p {
+  background-color: var(--main-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 12px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  line-height: 16.2px;
+  letter-spacing: -0.5%;
+}
+.con .wrap .home .popular ul li .txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+.con .wrap .home .popular ul li .txt > p {
+  font-weight: 500;
+  font-size: 12px;
+  color: #ff3609;
+  background-color: #fff6f2;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.con .wrap .home .popular ul li .txt .txt-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.con .wrap .home .popular ul li .txt .txt-title p {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--grey2);
+}
+.con .wrap .home .popular ul li .txt .txt-title p:last-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-grey1);
+}
+.con .wrap .home .popular ul li .txt .favorite {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+.con .wrap .home .popular ul li .txt .favorite p {
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--grey2);
 }
 
 #splash .content {

@@ -10,15 +10,15 @@
 	align-items: center;
 	padding: 0px 20px;
 	height: 100vh;
-    
+
 	.wrap {
 		width: 100%;
-        padding: 0px;
+		padding: 0px;
 
 		.authority-container {
 			background-color: #fff;
 			border-radius: 12px;
-			padding: 20px;
+			padding: 30px 20px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -80,8 +80,7 @@
 						gap: 12px;
 
 						.txt-box-con-camera,
-						.txt-box-con-alert,
-						.txt-box-con-location {
+						.txt-box-con-alert {
 							display: flex;
 							justify-content: center;
 							align-items: center;

@@ -50,42 +50,26 @@
                     <div class="profile-pic">
                         <label for="file">
                             <img src="./assets/icons/사진.png" alt="사진첨부">
+                            <img src="./assets/icons/남성.png" alt="프로필 사진">
                         </label>
                         <input type="file" id="file">
                     </div>
 
                     <!-- 개인정보 입력 -->
                     <div class="personal-infomation">
-                        <div class="personal-infomation-input">
-                            <p>전화번호 <span>*</span></p>
-                            <input type="textbox" name="phone" value="전화번호를 입력해주세요" id="phone">
-
-                            <button>인증번호 받기</button>
-                        </div>
-
-
-                        <!-- '인증번호 받기' 버튼 클릭 시 -->
-                        <!-- display:none 해둔상태입니다. -->
-                        <div class="personal-infomation-input resend" style="display: none;">
-                            <p>전화번호 <span>*</span></p>
-                            <input type="textbox" name="phone" id="phone">
-
-                            <button>인증번호 재발송</button>
-                        </div>
-                        <div class="personal-infomation-input type-verification" style="display: none;">
-                            <p>인증번호 입력 <span>*</span></p>
-
-                            <div class="verification">
-                                <input type="textbox" name="verification" id="verification">
-                                <span>02:32</span>
-                                <button>인증받기</button>
-                            </div>
-                        </div>
-
 
                         <div class="personal-infomation-input overlap-confirm">
                             <p>닉네임 <span>*</span></p>
                             <input type="textbox" name="nickname" id="nickname">
+
+                            <!-- textbox 오류 날 때 -->
+                            <div class="err-textbox" style="visibility: hidden;">
+                                <input type="text">
+                                <div class="err-textbox-txt">
+                                    <img src="./assets/icons/Vector.png" alt="경고 아이콘">
+                                    <span>Error text</span>
+                                </div>
+                            </div>
 
                             <button>중복확인</button>
                         </div>
@@ -126,6 +110,12 @@
                                     <p>남성</p>
                                 </button>
                                 <button>
+                                    <img src="./assets/icons/여성.png" alt="여성 캐릭터">
+                                    <p>여성</p>
+                                </button>
+
+                                <!-- 성별 클릭 시 -->
+                                <button class="gender-click" style="visibility: hidden;">
                                     <img src="./assets/icons/여성.png" alt="여성 캐릭터">
                                     <p>여성</p>
                                 </button>

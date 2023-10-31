@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 @import "_common.scss";
-@import "personal-info.scss";
 @import "login-info.scss";
 @import "join.scss";
 @import "join-completed.scss";
@@ -9,6 +8,9 @@
 @import "find-pw.scss";
 @import "main.scss";
 @import "authority.scss";
+@import "personal-info-01.scss";
+@import "personal-info-02.scss";
+@import "home.scss";
 
 #splash {
 	.content {
