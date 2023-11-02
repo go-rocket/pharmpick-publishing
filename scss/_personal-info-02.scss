@@ -110,20 +110,20 @@
 					}
 				}
 
-				.mytown{
+				.mytown {
 					display: flex;
 					flex-direction: column;
 
-					.mytown-input{
+					.mytown-input {
 						display: flex;
 						align-items: center;
 						position: relative;
 
-						input{
+						input {
 							width: 100%;
 						}
 
-						img{
+						img {
 							position: absolute;
 							right: 15px;
 						}
@@ -297,6 +297,13 @@
 								font-size: 14px;
 								font-weight: 500;
 								color: var(--main-color);
+							}
+
+							.check_style2,
+							.check_style3 {
+								&::after {
+									opacity: 1;
+								}
 							}
 						}
 					}
