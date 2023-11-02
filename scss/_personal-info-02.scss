@@ -47,7 +47,7 @@
 
 						&:last-child {
 							position: absolute;
-							bottom: 0px;
+							//bottom: 0px;
 						}
 					}
 				}
@@ -110,6 +110,26 @@
 					}
 				}
 
+				.mytown{
+					display: flex;
+					flex-direction: column;
+
+					.mytown-input{
+						display: flex;
+						align-items: center;
+						position: relative;
+
+						input{
+							width: 100%;
+						}
+
+						img{
+							position: absolute;
+							right: 15px;
+						}
+					}
+				}
+
 				.overlap-confirm,
 				.resend {
 					button {
@@ -136,7 +156,7 @@
 					width: 100vw;
 					height: 100vh;
 					background: rgba(0, 0, 0, 0.7) fixed;
-					z-index: 9;
+					z-index: 25;
 
 					.inner {
 						width: 375px;
@@ -243,27 +263,41 @@
 						justify-content: space-between;
 						align-items: center;
 
-						button {
-							border-radius: 12px;
+						.male,
+						.female {
 							background-color: var(--bg_g);
+							border-radius: 12px;
 							display: flex;
 							flex-direction: column;
-							align-items: center;
 							justify-content: center;
-							padding: 10px 48px;
+							align-items: center;
+							padding: 30px;
+							width: 160px;
+							height: 104px;
 
 							p {
-								color: var(--grey1);
-								font-weight: 500;
 								font-size: 14px;
-								letter-spacing: -0.5%;
-								line-height: 19.6px;
+								font-weight: 500;
+								color: var(--grey1);
 							}
 						}
 
 						.gender-click {
 							border: 2px solid var(--main-color);
-							background-color: #e8fffd;
+							border-radius: 12px;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							padding: 30px;
+							width: 160px;
+							height: 104px;
+
+							p {
+								font-size: 14px;
+								font-weight: 500;
+								color: var(--main-color);
+							}
 						}
 					}
 				}

@@ -54,15 +54,15 @@
                         <!-- 이메일 입력 -->
                         <div class="find-input">
                             <p>이메일 <span>*</span></p>
-                            <input type="textbox" name="email" value="이메일을 입력해주세요" id="email">
+                            <input type="textbox" name="email" placeholder="이메일을 입력해주세요" id="email">
                         </div>
                     </div>
                 </div>
 
 
                 <!-- [다음] 버튼 클릭 후 나타나는 모달 -->
-                <!-- display:none 해둔상태입니다. -->
-                <div class="find-pw after" style="display: none;">
+                <!-- style="visibility: hidden;" 해둔상태입니다. -->
+                <div class="find-pw after" style="visibility: hidden;">
 
                     <div class="overlap">
                         <div class="inner">
@@ -82,8 +82,8 @@
 
 
                 <!-- 이메일에서 [비밀번호 변경하기] 클릭 후 나타나는 화면 -->
-                <!-- display:none 해둔상태입니다. -->
-                <div class="find-pw" style="display: none;">
+                <!-- visibility:hidden 해둔상태입니다. -->
+                <div class="find-pw" style="visibility: hidden;">
 
                     <!-- 프로그레스 바 -->
                     <div class="progress-bar">
@@ -97,8 +97,8 @@
                         <!-- 비밀번호 입력 -->
                         <div class="find-input">
                             <p>비밀번호 <span>*</span></p>
-                            <input type="textbox" name="pw" value="비밀번호를 입력해주세요" id="pw">
-                            <input type="textbox" name="repw" value="비밀번호를 재입력해주세요" id="repw">
+                            <input type="textbox" name="pw" placeholder="비밀번호를 입력해주세요" id="pw">
+                            <input type="textbox" name="repw" placeholder="비밀번호를 재입력해주세요" id="repw">
                         </div>
                     </div>
 
@@ -108,15 +108,15 @@
                     </div>
 
                     <!-- [비밀번호, 비밀번호재입력] 입력 후 버튼 활성화 시-->
-                    <div class="btn-wrap">
+                    <div class="btn-wrap" style="visibility: hidden;">
                         <button type="button">확인</button>
                     </div>
                 </div>
 
 
                 <!-- [비밀번호 입력] 확인 버튼 클릭 후 나타나는 모달 -->
-                <!-- display:none 해둔상태입니다. -->
-                <div class="find-pw after" style="display: none;">
+                <!-- visibility:hidden 해둔상태입니다. -->
+                <div class="find-pw after" style="visibility: hidden;">
 
                     <div class="overlap">
                         <div class="inner">
@@ -145,8 +145,8 @@
                 <button type="button">다음</button>
             </div>
 
-            <!-- [이메일] 입력 후 버튼 활성화 시-->
-            <div class="btn-wrap" style="display: none;">
+            <!-- 버튼 활성화 시-->
+            <div class="btn-wrap"  style="visibility: hidden;">
                 <button type="button">다음</button>
             </div>
 

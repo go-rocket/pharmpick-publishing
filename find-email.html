@@ -40,7 +40,7 @@
             <div class="wrap">
 
                 <!-- 전화번호 인증번호 받기 버튼 클릭 전 기본값 -->
-                <div class="find-email">
+                <div class="find-email" >
 
                     <!-- 프로그레스 바 -->
                     <div class="progress-bar">
@@ -54,7 +54,7 @@
                         <!-- 전화번호 입력 -->
                         <div class="find-input">
                             <p>전화번호 <span>*</span></p>
-                            <input type="textbox" name="phone" value="전화번호를 입력해주세요" id="phone">
+                            <input type="textbox" name="phone" placeholder="전화번호를 입력해주세요" id="phone">
                             <button>인증번호 받기</button>
                         </div>
                     </div>
@@ -63,8 +63,8 @@
 
 
                 <!-- 전화번호 인증번호 받기 버튼 클릭 후 -->
-                <!-- display:none 해둔상태입니다. -->
-                <div class="find-email after" style="display: none;">
+                <!-- style="visibility: hidden;" 해둔상태입니다. -->
+                <div class="find-email after" style="visibility: hidden;">
 
                     <!-- 프로그레스 바 -->
                     <div class="progress-bar">
@@ -78,7 +78,7 @@
                         <!-- 전화번호 입력 -->
                         <div class="find-input">
                             <p>전화번호 <span>*</span></p>
-                            <input type="textbox" name="phone" value="전화번호를 입력해주세요" id="phone">
+                            <input type="textbox" name="phone" placeholder="전화번호를 입력해주세요" id="phone">
                             <button>인증번호 재발송</button>
                         </div>
                     </div>
@@ -98,8 +98,8 @@
                     </div>
 
                     <!-- 인증받기 버튼 클릭 시 -->
-                    <!-- display:none 해둔상태입니다. -->
-                    <div class="overlap">
+                    <!-- visibility:hidden 해둔상태입니다. -->
+                    <div class="overlap" style="visibility: hidden;">
                         <div class="inner">
                             <div class="img">
                                 <img src="/assets/icons/확인체크.png" alt="확인 체크">
@@ -119,8 +119,8 @@
 
 
                 <!-- 이메일 찾기 마지막 페이지 -->
-                <!-- display:none 해둔상태입니다. -->
-                <div class="find-email finished" style="display: none;">
+                <!-- visibility:hidden 해둔상태입니다. -->
+                <div class="find-email finished" style="visibility: hidden;">
 
                     <!-- 프로그레스 바 -->
                     <div class="progress-bar">
@@ -151,10 +151,14 @@
             </div>
 
             <!-- 활성화 시 버튼 -->
-            <div class="btn-wrap" style="display: none;">
+            <div class="btn-wrap" style="visibility: none;">
                 <button type="button">다음</button>
             </div>
 
+            <!-- 마지막 페이지 로그인 버튼 -->
+            <div class="btn-wrap" style="visibility: none;">
+                <button type="button">로그인</button>
+            </div>
 
         </div>
 
