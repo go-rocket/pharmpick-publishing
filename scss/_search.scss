@@ -1,14 +1,16 @@
-.con {
+.search {
 	position: relative;
 
 	.wrap {
 		padding: 20px 20px 0px;
-		overflow: hidden;
+		position: relative;
+		height: 100vh;
 
-		.search {
+		.search-content {
 			display: flex;
 			flex-direction: column;
 			gap: 40px;
+			overflow-x: hidden;
 
 			.search-bar {
 				display: flex;
@@ -30,14 +32,13 @@
 				}
 			}
 
-			.color{
-				input{
+			.color {
+				input {
 					color: var(--main-color);
 					font-weight: 700;
 					font-size: 14px;
 				}
 			}
-
 
 			.health-search {
 				display: flex;
@@ -253,78 +254,76 @@
 					}
 				}
 			}
-		}
 
-		.search-img {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-			gap: 10px;
-			margin-top: 80px;
-
-			.search-img-title {
+			.search-img {
 				display: flex;
-				justify-content: center;
-				gap: 8px;
-				align-items: center;
-				width: 68%;
-				padding: 8px 0px;
-				border-radius: 16px;
-				background-color: #ffe1da;
-				position: relative;
+				flex-direction: column;
+				align-items: flex-end;
+				gap: 10px;
+				margin-top: 50px;
 
-				p {
-					font-weight: 500;
-					font-size: 12px;
-					letter-spacing: -0.5%;
-					color: #cc2b07;
-				}
+				.search-img-title {
+					display: flex;
+					justify-content: center;
+					gap: 8px;
+					align-items: center;
+					width: 68%;
+					padding: 8px 0px;
+					border-radius: 16px;
+					background-color: #ffe1da;
+					position: relative;
 
-				img {
-					&:last-child {
-						position: absolute;
-						right: 20px;
-						bottom: -6px;
+					p {
+						font-weight: 500;
+						font-size: 12px;
+						letter-spacing: -0.5%;
+						color: #cc2b07;
+					}
+
+					img {
+						&:last-child {
+							position: absolute;
+							right: 20px;
+							bottom: -6px;
+						}
 					}
 				}
-			}
 
-			.search-img-button {
-				button {
-					background-color: var(--main-color);
-					color: #fff;
-					display: flex;
-					padding: 10px 20px;
-					border-radius: 196px;
-					border: 1px solid transparent;
-					justify-content: space-between;
-					align-items: center;
-					gap: 10px;
+				.search-img-button {
+					button {
+						background-color: var(--main-color);
+						color: #fff;
+						display: flex;
+						padding: 10px 20px;
+						border-radius: 196px;
+						border: 1px solid transparent;
+						justify-content: space-between;
+						align-items: center;
+						gap: 10px;
 
-					font-weight: 700;
-					font-size: 14px;
-					line-height: 18.9px;
-					letter-spacing: -0.5%;
+						font-weight: 700;
+						font-size: 14px;
+						line-height: 18.9px;
+						letter-spacing: -0.5%;
+					}
 				}
 			}
 		}
 	}
 
-	.search-bar-bottom{
+	.search-bar-bottom {
 		width: 100%;
 		background-color: #fff;
 		position: absolute;
-		top:170px;
+		top: 170px;
 		padding: 30px 20px;
 		height: 500px;
 		border-top: 4px solid var(--bg_g);
 
-		ul{
+		ul {
 			display: flex;
 			flex-direction: column;
 			gap: 40px;
 		}
 	}
-
-
 }
