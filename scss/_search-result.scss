@@ -1,4 +1,4 @@
-.con {
+.search-result {
 	position: relative;
 
 	.wrap {
@@ -6,7 +6,7 @@
 		overflow: hidden;
 		height: 100vh;
 
-		.search-result {
+		.search-result-content {
 			display: flex;
 			flex-direction: column;
 			gap: 30px;

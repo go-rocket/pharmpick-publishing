@@ -1,6 +1,12 @@
+header {
+	.wrap {
+		padding: 0px;
+	}
+}
+
 .con {
 	.wrap {
-		.find-email {
+		.find-pw-01 {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -33,7 +39,7 @@
 				}
 			}
 
-			.find-email-form {
+			.find-pw-form {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
@@ -89,45 +95,6 @@
 		}
 
 		.after {
-
-			.find-email-form {
-				.find-input {
-					button {
-						border: 1px solid var(--main-color);
-						color: var(--main-color);
-						background-color: #fff;
-					}
-
-					.verification {
-						display: flex;
-						justify-content: space-between;
-						position: relative;
-
-						input {
-							padding: 16px 27px;
-						}
-
-						span {
-							position: absolute;
-							right: 125px;
-							top: 17px;
-							letter-spacing: -0.5%;
-							line-height: 21.6px;
-							font-size: 16px;
-							font-weight: 500;
-							color: var(--main-color);
-						}
-
-						button {
-							background-color: var(--main-color);
-							color: #fff;
-							margin-top: 0px;
-							padding: 16px 20px;
-						}
-					}
-				}
-			}
-
 			.overlap {
 				display: flex;
 				flex-direction: column;
@@ -148,7 +115,6 @@
 				z-index: 13;
 
 				.inner {
-					width: 375px;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -160,32 +126,45 @@
 						top: 80px;
 					}
 
-					.txt {
+					.txt-box {
 						background-color: #fff;
 						display: flex;
 						flex-direction: column;
 						align-items: center;
 						justify-content: center;
-						gap: 20px;
-						width: 100%;
-						padding: 100px 30px 30px;
-						border-radius: 12px;
+						gap: 30px;
 
-						p {
-							font-weight: 700;
-							font-size: 20px;
-							line-height: 28px;
-							letter-spacing: -0.5%;
-							color: var(--Dark-Grey-1);
+						width: 100%;
+						border-radius: 12px;
+						padding: 100px 30px 40px;
+
+						.txt-title {
+							padding: 0;
+
+							p {
+								font-weight: 700;
+								font-size: 20px;
+								line-height: 28px;
+								letter-spacing: -0.5%;
+								color: var(--Dark-Grey-1);
+							}
 						}
 
-						span {
-							font-weight: 500;
-							font-size: 16px;
-							line-height: 21.6px;
-							letter-spacing: -0.5%;
-							color: var(--grey3);
-							margin-bottom: 20px;
+						.txt {
+							padding: 0;
+							display: flex;
+							flex-direction: column;
+							gap: 5px;
+							border: 1px solid transparent;
+
+							span {
+								margin: 0;
+								font-weight: 500;
+								font-size: 16px;
+								line-height: 21.6px;
+								letter-spacing: -0.5%;
+								color: var(--grey3);
+							}
 						}
 
 						button {
@@ -214,7 +193,7 @@
 		}
 
 		.finished {
-			.email-result {
+			.pw-result {
 				margin-top: 30px;
 
 				border: 1px solid var(--main-color);
